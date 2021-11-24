@@ -22,6 +22,65 @@ git branch -o nome da nova branch
 ----------------------------------------------------------------------------------------------
 Transferir os dados da branch paralela para a branch principal.
 Entrar na branch que irá receber as atualizações.
+
 git checkout master
+
 Informar de qual branch voce tratá as atualizações, nesse caso é a staging, então:
+
 git merge staging
+
+------------------------------------------------------------------------------------------------
+* Sempre antes de fazer o merge e que entrar na branch principal, vc deve puxar as informações mais novas da mesma do servidor para a sua maquina.
+
+git pull 
+
+Ou seja:
+
+1 - Fazer git pull da branch principal.
+2 - Gerar uma nova branch a partir da branch principal.
+3 - Trabalhar ( add novas funcionalidades) na nova branch que criou.
+4 - Finalizar o trabalho na branch temporária.
+6 - Fazer o git checkout para a branch principal.
+7 - Fazer o git pull da branch principal.
+8 - Fazer o Merge(unir) o codigo da branch temporária com a branch principal(apos o teste).
+9 - Fazer o git push da branch principal. 
+
+------------------------------------------------------------------------------------------------
+
+Criar uma nova branch com base na brach principal:
+
+git checkout -b (nome da branch de func) (branch principal)
+
+
+---------------------------- Exemplo pratico---------------------------------------------------
+( na brach master)
+1 - git pull
+
+2 - git checkout -b teste-branch-relacionada master
+
+Fazer as linhas de cod, arquivos e etc.
+Adicionar os arquivos no branch
+
+3 - git add .
+
+Checar o status
+
+4 -git status  
+5 - git commit -m "Nova Versão"
+
+Fazer os testes necessários
+
+Voltar para a master
+6 - git checkout master
+
+Atualizar o cod da master
+
+7 - git pull 
+
+Fazer o merge( realizar a união entre as versões)
+
+8 - git merge teste-branch-relacionada
+
+Realizar o envio da nova versão 
+
+9 - git push
