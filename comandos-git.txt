@@ -4,4 +4,4 @@ comandos git.
 git status - verifica os arquivos a serem adicionado para futuro commit
 git add "arquivo" - como se fosse um pre commit, informando qual arquivo foi alterado para o futuro commit.
 git add . - um pre commit para enviar todos os arquivos cujo foram criados/alterados.
-
+git config --global user.email "seu email" - usado para linkar seu git ao github na nuvem
