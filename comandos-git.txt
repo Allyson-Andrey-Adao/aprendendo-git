@@ -5,3 +5,16 @@ git status - verifica os arquivos a serem adicionado para futuro commit
 git add "arquivo" - como se fosse um pre commit, informando qual arquivo foi alterado para o futuro commit.
 git add . - um pre commit para enviar todos os arquivos cujo foram criados/alterados.
 git config --global user.email "seu email" - usado para linkar seu git ao github na nuvem
+----------------------------------------------------------------------------------------------
+comandos mais profissionais
+
+caso realizou um commit de forma equivocada, pode voltar a versão realizando os sequintes passos:
+git reflogv -- pega os ids das versões antes feitas. As vesões mais novas são as do topo.
+Apos isso, faça o comando:
+git reset --hard (id) 
+* OBS: Não rode esses comandos de voltar versão a não ser se for extremamente necessário. Caso estiver trabalhando em conjunto com uma equipe, consulte-os antes.
+
+----------------------------------------------------------------------------------------------
+Criação de branch 
+
+git branch -o nome da nova branch
