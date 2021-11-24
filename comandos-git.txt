@@ -18,3 +18,10 @@ git reset --hard (id)
 Criação de branch 
 
 git branch -o nome da nova branch
+
+----------------------------------------------------------------------------------------------
+Transferir os dados da branch paralela para a branch principal.
+Entrar na branch que irá receber as atualizações.
+git checkout master
+Informar de qual branch voce tratá as atualizações, nesse caso é a staging, então:
+git merge staging
